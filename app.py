@@ -2,11 +2,9 @@ from flask import Flask, request, render_template
 from flask_restful import Resource, Api, fields, marshal_with
 from flask_sqlalchemy import SQLAlchemy
 import json
-from flask_cors import CORS
 
 
 app=Flask(__name__)
-CORS(app)
 db=SQLAlchemy()
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database.sqlite3'
 db.init_app(app)
